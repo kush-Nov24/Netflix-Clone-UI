@@ -1,0 +1,46 @@
+@media only screen and (min-width: 1500px) {
+  .row {
+    margin: 3vw auto;
+  }
+}
+.row {
+  color: white;
+  margin: 3vw 30px;
+  max-width: 1500px;
+}
+.row-title {
+  margin-bottom: 10px;
+}
+.row-wrapper-large {
+  padding: 10px 7px;
+}
+.row-imgs-large {
+  display: flex;
+  overflow-x: scroll;
+}
+.row-img-large {
+  border-radius: 3px;
+  height: 200px;
+  transition: transform 0.5s;
+}
+.row-img-large:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+
+.row-wrapper {
+  padding: 10px;
+}
+.row-imgs {
+  display: flex;
+  overflow-x: scroll;
+}
+.row-img {
+  border-radius: 3px;
+  height: 200px;
+  transition: transform 0.5s;
+}
+.row-img:hover {
+  cursor: pointer;
+  transform: scale(1.08, 1.08);
+}

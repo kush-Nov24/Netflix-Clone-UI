@@ -1,0 +1,9 @@
+.modal {
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  max-width: 75%;
+  background-color: rgb(17, 17, 17);
+  padding: 20px;
+}
