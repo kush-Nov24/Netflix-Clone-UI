@@ -8,6 +8,9 @@
   margin: 3vw 30px;
   max-width: 1500px;
 }
+.originals-row {
+  margin: 0 30px 3vw 30px;
+}
 .row-title {
   margin-bottom: 10px;
 }
@@ -38,9 +41,12 @@
 .row-img {
   border-radius: 3px;
   height: 200px;
-  transition: transform 0.5s;
+  transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .row-img:hover {
   cursor: pointer;
-  transform: scale(1.08, 1.08);
+  transform: scale(1.05, 1.05);
+}
+::-webkit-scrollbar {
+  display: none;
 }

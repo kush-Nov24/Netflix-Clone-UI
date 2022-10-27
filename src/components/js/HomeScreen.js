@@ -15,13 +15,13 @@ const HomeScreen = () => {
         url={requests.fetchNetflixOriginals}
         largePoster
       />
-      {/* <Row title="Top Rated" url={requests.fetchTopRated} />
+      <Row title="Top Rated" url={requests.fetchTopRated} />
       <Row title="Trending" url={requests.fetchTrending} />
       <Row title="Action" url={requests.fetchActionMovies} />
       <Row title="Comedy" url={requests.fetchComedyMovies} />
       <Row title="Romance" url={requests.fetchRomanceMovies} />
       <Row title="Horror" url={requests.fetchHorrorMovies} />
-      <Row title="Documentaries" url={requests.fetchDocumentaries} /> */}
+      <Row title="Documentaries" url={requests.fetchDocumentaries} />
     </div>
   );
 };

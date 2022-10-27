@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Modal.css";
 
 const Modal = () => {
+  console.log("Modal Component called");
   return (
     <div className="modal">
       <div className="modal-heading">

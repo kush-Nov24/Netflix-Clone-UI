@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/Row.css";
 import URLS from "../../Urls";
-// import Modal from "../js/Modal";
+import Modal from "./Modal";
 
 const Row = (props) => {
   const { title, url, largePoster = false } = props;
@@ -15,18 +15,20 @@ const Row = (props) => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [url]);
 
+  function modal() {
+    return <Modal />;
+  }
   return (
-    <div className="row">
+    <div className={`row ${largePoster && "originals-row"}`}>
       <h2 className="row-title">{title}</h2>
       <div className={` ${largePoster ? "row-imgs-large" : "row-imgs"}`}>
-        {movies.map((movie) => {
-          if (
-            (largePoster && movie.poster_path) ||
-            (!largePoster && movie.backdrop_path)
-          )
-            return (
+        {movies.map(
+          (movie) =>
+            ((largePoster && movie.poster_path) ||
+              (!largePoster && movie.backdrop_path)) && (
               <div
                 className={`${
                   largePoster ? "row-wrapper-large" : "row-wrapper"
@@ -34,15 +36,16 @@ const Row = (props) => {
                 key={movie.id}
               >
                 <img
+                  onClick={modal}
                   className={`${largePoster ? "row-img-large" : "row-img"}`}
                   src={`${URLS.imgUrl}/${
                     largePoster ? movie.poster_path : movie.backdrop_path
                   }`}
-                  alt="image"
+                  alt={movie.name}
                 />
               </div>
-            );
-        })}
+            )
+        )}
       </div>
     </div>
   );
